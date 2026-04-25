@@ -85,6 +85,25 @@
 	},
 
 	"Training": {
-		"Hello, there is nothing here yet!": "Zdravíčko, zatím tu nic není!"
+		"Hello, there is nothing here yet!": "Zdravíčko, zatím tu nic není!",
+		"Users": "Uživatelé",
+		"Username": "Uživatelské jméno",
+		"Created": "Vytvořen",
+		"Last sign in": "Poslední přihlášení",
+		"Address": "Adresa",
+		"Phone number": "Telefonní číslo",
+		"IP address": "IP adresa",
+		"MAC address": "MAC adresa",
+		"Back to table": "Zpět na tabulku",
+		"Failed to load detail.": "Načítání detailu selhalo.",
+		"Detail was not found.": "Detail nebyl nalezen.",
+		"Episode number": "Číslo epizody",
+		"Director": "Režisér",
+		"Producer": "Producent",
+		"Release Date": "Datum vydání",
+		"Description": "Popis",
+		"Back to index": "Zpět na index",
+		"Failed to load data.": "Načítání dat selhalo.",
+		"Data was not found.": "Data nebyla nalezena."
 	}
 }

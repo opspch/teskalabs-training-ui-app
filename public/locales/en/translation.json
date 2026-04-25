@@ -85,6 +85,25 @@
 	},
 
 	"Training": {
-		"Hello, there is nothing here yet!": "Hello, there is nothing here yet!"
+		"Hello, there is nothing here yet!": "Hello, there is nothing here yet!",
+		"Users": "Users",
+		"Username": "Username",
+		"Created": "Created",
+		"Last sign in": "Last sign in",
+		"Address": "Address",
+		"Phone number": "Phone number",
+		"IP address": "IP address",
+		"MAC address": "MAC address",
+		"Back to table": "Back to table",
+		"Failed to load detail.": "Failed to load detail.",
+		"Detail was not found.": "Detail was not found.",
+		"Episode number": "Episode number",
+		"Director": "Director",
+		"Producer": "Producer",
+		"Release Date": "Release Date",
+		"Description": "Description",
+		"Back to index": "Back to index",
+		"Failed to load data.": "Failed to load data.",
+		"Data was not found.": "Data was not found."
 	}
 }

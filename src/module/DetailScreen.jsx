@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router";
+import { useTranslation } from 'react-i18next';
 import { Alert, Card, CardBody, CardHeader, Container, Spinner } from "reactstrap";
 import { DateTime } from "asab_webui_components";
 import { DetailRow } from "../components/DetailRow";
@@ -7,7 +8,9 @@ import axios from 'axios';
 
 export function DetailScreen() {
 	const { id } = useParams();
-
+    
+    const { t } = useTranslation();
+    
 	const [detail, setDetail] = useState(null);
 	const [isLoading, setIsLoading] = useState(true);
 	const [error, setError] = useState(null);
@@ -47,30 +50,30 @@ export function DetailScreen() {
 	}
 
 	if (error) {
-		return <Alert color="danger">Failed to load detail.</Alert>;
+		return <Alert color="danger">{t("Training|Failed to load detail.")}</Alert>;
 	}
 
 	if (!detail) {
-		return <Alert color="warning">Detail was not found.</Alert>;
+		return <Alert color="warning">{t("Training|Detail was not found.")}</Alert>;
 	}
 
 	return (
 		<Container className="py-3">
-			<Link to="/">Back to table</Link>
+			<Link to="/">{t("Training|Back to table")}</Link>
 
 			<Card className="mt-3">
 				<CardHeader>{detail.username}</CardHeader>
 				<CardBody>
 					<div className="mb-0">
 						<DetailRow label="ID">{detail.id}</DetailRow>
-						<DetailRow label="Username">{detail.username}</DetailRow>
+						<DetailRow label={t("Training|Username")}>{detail.username}</DetailRow>
 						<DetailRow label="Email">{detail.email}</DetailRow>
-						<DetailRow label="Created"><DateTime value={detail.created} /></DetailRow>
-						<DetailRow label="Last sign in"><DateTime value={detail.last_sign_in} /></DetailRow>
-						<DetailRow label="Address">{detail.address}</DetailRow>
-						<DetailRow label="Phone number">{detail.phone_number}</DetailRow>
-						<DetailRow label="IP address">{detail.ip_address}</DetailRow>
-						<DetailRow label="MAC address">{detail.mac_address}</DetailRow>
+						<DetailRow label={t("Training|Created")}><DateTime value={detail.created} /></DetailRow>
+						<DetailRow label={t("Training|Last sign in")}><DateTime value={detail.last_sign_in} /></DetailRow>
+						<DetailRow label={t("Training|Address")}>{detail.address}</DetailRow>
+						<DetailRow label={t("Training|Phone number")}>{detail.phone_number}</DetailRow>
+						<DetailRow label={t("Training|IP address")}>{detail.ip_address}</DetailRow>
+						<DetailRow label={t("Training|MAC address")}>{detail.mac_address}</DetailRow>
 					</div>
 				</CardBody>
 			</Card>
