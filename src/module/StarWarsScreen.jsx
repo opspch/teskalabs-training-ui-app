@@ -8,7 +8,7 @@ import axios from 'axios';
 
 export function StarWarsScreen() {
     const { t } = useTranslation();
-    
+
 	const [data, setData] = useState(null);
 	const [isLoading, setIsLoading] = useState(true);
 	const [error, setError] = useState(null);
@@ -57,7 +57,10 @@ export function StarWarsScreen() {
 
 	return (
 		<Container className="py-3">
-            <Link to="/">{t("Training|Back to index")}</Link>
+            <Link to="/" className="fs-3">
+                <i className="bi bi-arrow-left pe-2"></i>
+                {t("Training|Back to index")}
+            </Link>
 
 			{ data.map(ep =>
                 <Card className="mt-3" key={ep.episode_id}>

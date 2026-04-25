@@ -8,7 +8,7 @@ import axios from 'axios';
 
 export function DetailScreen() {
 	const { id } = useParams();
-    
+
     const { t } = useTranslation();
     
 	const [detail, setDetail] = useState(null);
@@ -59,7 +59,10 @@ export function DetailScreen() {
 
 	return (
 		<Container className="py-3">
-			<Link to="/">{t("Training|Back to table")}</Link>
+			<Link to="/" className="fs-3">
+                <i className="bi bi-arrow-left pe-2"></i>
+                {t("Training|Back to table")}
+            </Link>
 
 			<Card className="mt-3">
 				<CardHeader>{detail.username}</CardHeader>
