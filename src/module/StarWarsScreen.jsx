@@ -2,16 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { Alert, Card, CardBody, CardHeader, Container, Spinner } from "reactstrap";
 import { DateTime } from "asab_webui_components";
+import { DetailRow } from "../components/DetailRow";
 import axios from 'axios';
-
-function DetailRow({ label, children }) {
-	return (
-		<div className="row py-2 border-bottom">
-			<span className="col-sm-3 mb-0 text-body-secondary fw-bold ">{label}</span>
-			<span className="col-sm-9 mb-0">{children}</span>
-		</div>
-	);
-}
 
 export function StarWarsScreen() {
 	const [data, setData] = useState(null);
