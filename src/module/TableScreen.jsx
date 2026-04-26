@@ -93,6 +93,15 @@ async function loadRows({ params }) {
 	return applyTableParams(response.data.data ?? [], params);
 }
 
+const Header = ({ children }) => {
+	return	(
+		<div className="flex-fill">
+			<h3>
+				{children}
+			</h3>
+		</div>
+	)
+}
 
 export function TableScreen() {
 	const { t } = useTranslation();
@@ -128,20 +137,12 @@ export function TableScreen() {
 		},
 	];
 
-	const Header = () => {
-		return	(
-			<div className="flex-fill">
-				<h3>
-					<i className="bi bi-people-fill pe-2"></i>
-					{t("Training|Users")}
-				</h3>
-			</div>
-		)
-	}
-
 	return (
 		<Container className="h-100 py-3">
-			<Header></Header>
+			<Header>
+				<i className="bi bi-people-fill pe-2"></i>
+				{t("Training|Users")}
+			</Header>
 			<DataTableCard2
 				columns={columns}
 				loader={loadRows}
